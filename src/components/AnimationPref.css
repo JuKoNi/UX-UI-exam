@@ -1,0 +1,10 @@
+.pref-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pref-container .pref-radio {
+    display: flex;
+    justify-content: space-around;
+
+}

@@ -1,0 +1,7 @@
+.winners-wrapper {
+    perspective: 1000px;
+}
+
+.winners-chart {
+    width: 100%;
+}
