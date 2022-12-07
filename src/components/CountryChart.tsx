@@ -1,8 +1,8 @@
-import React, { useEffect, Component, useState } from 'react';
+import { useEffect } from 'react';
 import './CountryChart.css';
 import { CountryData } from '../data/winners.js';
-import { Pie, Bar, Line } from 'react-chartjs-2';
-import anime, { AnimeInstance } from 'animejs';
+import { Bar } from 'react-chartjs-2';
+import anime from 'animejs';
 
 
 
@@ -30,7 +30,6 @@ const CountryChart = (props: Props) => {
       anime({
         targets: '.country-wrapper',
         scale: 1.1,
-        // opacity: [1, 0.7],
         easing: 'easeInOutQuad',
         direction: 'alternate',
       });

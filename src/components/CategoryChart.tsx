@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { Pie, Bar, Line } from 'react-chartjs-2';
-import anime, { AnimeInstance } from 'animejs';
+import { useEffect } from 'react';
+import { Bar } from 'react-chartjs-2';
+import anime from 'animejs';
 import { categoryData } from '../data/awards';
 import './CategoryChart.css'
 
@@ -30,7 +30,6 @@ const CategoryChart = (props: Props) => {
         anime({
           targets: '.category-wrapper',
           scale: 1.1,
-          // opacity: [1, 0.7],
           easing: 'easeInOutQuad',
           direction: 'alternate',
         });

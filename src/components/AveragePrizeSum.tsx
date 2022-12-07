@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './AveragePrizeSum.css'
-import { Pie, Bar, Line } from 'react-chartjs-2';
-import { PrizeData, AdjustedPrizeData } from '../data/awards'
+import { Line } from 'react-chartjs-2';
+import { PrizeData } from '../data/awards'
 import anime from 'animejs';
 
 type Props = {
@@ -28,7 +28,6 @@ const AveragePrizeSum = (props: Props) => {
 
         ],
         easing: 'spring(1, 80, 10, 0)',
-        // easing: 'easeInOutElastic',
         duration: 4000
      })
     }
@@ -36,7 +35,6 @@ const AveragePrizeSum = (props: Props) => {
     anime({
       targets: '.sum-wrapper',
       scale: 1.1,
-      // opacity: [1, 0.7],
       easing: 'easeInOutQuad',
       direction: 'alternate',
     });

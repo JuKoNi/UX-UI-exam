@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './GenderChart.css'
 import { genderData } from '../data/winners.js';
-import { Pie, Bar, Line } from 'react-chartjs-2';
-import anime, { AnimeInstance } from 'animejs';
+import { Pie } from 'react-chartjs-2';
+import anime from 'animejs';
 
 
 
@@ -21,7 +21,6 @@ const GenderChart = (props: Props) => {
           { translateX: '100%', rotate: 360},
           { translateX: '-0', rotate: -360},
           { rotateY: 360 },
-          // { rotateY: -360, translateY: '0' },
           { translateY: '0' },
 
   
@@ -36,7 +35,6 @@ const GenderChart = (props: Props) => {
       anime({
         targets: '.gender-wrapper',
         scale: 1.1,
-        // opacity: [1, 0.7],
         easing: 'easeInOutQuad',
         direction: 'alternate',
       });
@@ -45,11 +43,11 @@ const GenderChart = (props: Props) => {
 
 
   const options = {
-    maintainAspectRatio: false,
-    responsive: true,
+    // maintainAspectRatio: false,
+    // responsive: true,
     plugins: {
       legend: {
-        position: 'right'
+        position: 'bottom'
       }
     }
   }

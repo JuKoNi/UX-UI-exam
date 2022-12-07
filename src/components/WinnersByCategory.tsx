@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { count, winnersByCategoryData } from '../data/awards';
-import { Pie, Bar, Line } from 'react-chartjs-2';
+import { useEffect } from 'react';
+import { winnersByCategoryData } from '../data/awards';
+import { Pie } from 'react-chartjs-2';
 import './WinnersByCategory.css'
 import anime from 'animejs';
 
@@ -18,7 +18,6 @@ const WinnersByCategory = (props: Props) => {
           { rotate: 180, translateY: '0' },
           { translateX: '100%', rotate: 360},
           { translateX: '-0' },
-          // { rotateY: -360, translateY: '0' },
           { translateX: '0' },
         ],
         easing: 'easeInOutElastic',
@@ -29,7 +28,6 @@ const WinnersByCategory = (props: Props) => {
       anime({
         targets: '.winByCat-wrapper',
         scale: 1.1,
-        // opacity: [1, 0.7],
         easing: 'easeInOutQuad',
         direction: 'alternate',
       });

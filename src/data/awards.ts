@@ -43,7 +43,7 @@ const yearCount: any = {};
 for (const year of yearArr) {
     yearCount[year] = yearCount[year] ? yearCount[year] + 1 : 1;
 }
-// console.log(yearCount);
+
 type PrizeType = {
   x: number | string;
   y: number ;
@@ -109,7 +109,7 @@ let PrizeData = {
     backgroundColor: ['#9E66BD']
 }], 
 }
-// console.log(averagePrizeAdjustedArr);
+
 
 // ******************** NUMBER OF WINNERS BY CATEGORY ********************
 
@@ -117,7 +117,6 @@ type WinnerType = {
   laureates: string[];
   category: string;
 }
-console.log('first laureate', awards[0].laureates);
 
 const getNames = (laureates: any[] | any): string[] => {
   if (Array.isArray(laureates)) {
@@ -129,24 +128,19 @@ const getNames = (laureates: any[] | any): string[] => {
         return laureate.orgName.en
        
      } else {
-      console.log('inget knownName eller orgName', laureate);
       return []
      }
    })
 
   } else {
-    console.log('inte en array', laureates);
     return []
   }
 
 }
 
-console.log(awards[72]);
 
 let winnersArr: WinnerType[] = []
 awards.map((winner) => {winnersArr.push({ laureates: getNames(winner.laureates), category: winner.category?.en})})
-console.log(winnersArr);
-
 
 const count: any = {};
 
@@ -182,4 +176,4 @@ const winnersByCategoryData = {
 
 
 
-export { categoryData, PrizeData, AdjustedPrizeData, count, winnersByCategoryData}
+export { categoryData, PrizeData, winnersByCategoryData}

@@ -97,7 +97,14 @@ let winnersData = {
   datasets: [{
       label: 'Number of Nobel Prizes',
       data: sortedWinners,
-      backgroundColor: ['#8099ED']
+      backgroundColor: [
+        '#70B0FD',
+        '#8099ED',
+        '#9080D8',
+        '#9E66BD',
+        '#A6499C',
+        '#A82978'
+    ],
   }]
 }
 

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './WinnersChart.css'
 import { winnersData } from '../data/winners';
-import { Pie, Bar, Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import anime from 'animejs';
 
 
@@ -20,19 +20,10 @@ const WinnersChart = (props: Props) => {
           {rotateX: '40deg'},
           {rotateX: '70deg'},
           {rotateX: '100deg'},
-          // {rotateX: '140deg'},
           {rotateX: '180deg'},
           {rotateX: '260deg'},
           {rotateX: '360deg'}
-          // {rotateX: '0deg'},
-          // {rotateX: '-20deg'},
-          // {rotateX: '0deg'},
-          // {rotateX: '-40deg'},
-          // {rotateX: '-10deg'},
-          // {rotateX: '0deg'},
-
         ],
-        // easing: 'easeInOutElastic',
         easing: 'spring(1, 80, 10, 0)',
         duration: 5000
      })
@@ -41,7 +32,6 @@ const WinnersChart = (props: Props) => {
       anime({
         targets: '.winners-wrapper',
         scale: 1.1,
-        // opacity: [1, 0.7],
         easing: 'easeInOutQuad',
         direction: 'alternate',
       });

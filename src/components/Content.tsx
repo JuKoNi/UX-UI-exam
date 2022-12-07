@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Content.css'
 import anime from 'animejs';
 import Nav from './Nav';

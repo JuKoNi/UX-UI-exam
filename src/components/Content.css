@@ -1,5 +1,4 @@
 .main-section {
-
   width: 98vw;
   max-height: 100vh;
   margin-bottom: 0;
@@ -27,11 +26,9 @@ h3 {
     align-items: center;
     margin: 0 auto;
     background-color: white;
-    /* border: 2px solid  rgba(59, 76, 175, 0.564); */
     width: 80vw;
     height: 29em;
     position: absolute;
-    /* top: 7vh; */
   }
 
 
