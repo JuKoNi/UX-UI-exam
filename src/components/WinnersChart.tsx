@@ -16,20 +16,30 @@ const WinnersChart = (props: Props) => {
       anime({
         targets: '.winners-chart',
         keyframes: [
+          {rotateX: '0deg'},
           {rotateX: '40deg'},
           {rotateX: '70deg'},
           {rotateX: '100deg'},
-          {rotateX: '140deg'},
+          // {rotateX: '140deg'},
           {rotateX: '180deg'},
+          {rotateX: '260deg'},
           {rotateX: '360deg'}
+          // {rotateX: '0deg'},
+          // {rotateX: '-20deg'},
+          // {rotateX: '0deg'},
+          // {rotateX: '-40deg'},
+          // {rotateX: '-10deg'},
+          // {rotateX: '0deg'},
+
         ],
-        easing: 'easeInOutElastic',
+        // easing: 'easeInOutElastic',
+        easing: 'spring(1, 80, 10, 0)',
         duration: 5000
      })
     }
     if (props.chosenAni === 'gentle') {
       anime({
-        targets: '.winners-chart',
+        targets: '.winners-wrapper',
         scale: 1.1,
         // opacity: [1, 0.7],
         easing: 'easeInOutQuad',

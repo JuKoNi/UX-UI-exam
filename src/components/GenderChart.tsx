@@ -34,7 +34,7 @@ const GenderChart = (props: Props) => {
     }
     if (props.chosenAni === 'gentle') {
       anime({
-        targets: '.gender-chart',
+        targets: '.gender-wrapper',
         scale: 1.1,
         // opacity: [1, 0.7],
         easing: 'easeInOutQuad',

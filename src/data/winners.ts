@@ -27,9 +27,10 @@ const genderData = {
 };
 
 // ******************** WINNERS BY COUNTRY ********************
-
-let countriesArr: any = [];
+let countriesArr: string[] = [];
 winners.map(winner => winner.birth?.place.country.en ? countriesArr.push( winner.birth?.place.country.en) : winner.founded?.place?.country?.en ? countriesArr.push( winner.founded?.place?.country?.en) : countriesArr.push('Unknown') )
+
+
 
 
 const countryCount: any = {};
@@ -37,15 +38,19 @@ const countryCount: any = {};
 for (const country of countriesArr) {
     countryCount[country] = countryCount[country] ? countryCount[country] + 1 : 1;
 }
+type CountryType = {
+    x: string;
+    y: number | any;
+}
+let countryData: CountryType[] = [];
 
-let countryData: any = [];
 
 for (const [key, value] of Object.entries(countryCount)) {
 
     countryData.push({ x: key, y: value});
 }
 
-countryData.sort((a: { y: string; }, b: { y: string; }) => parseInt(b.y) - parseInt(a.y));
+countryData.sort((a: { y: number; }, b: { y: number; }) => b.y - a.y);
 
 let numOfCountries: number = 30;
 const sortedCountries = countryData.splice(0, numOfCountries)
@@ -69,7 +74,11 @@ let CountryData = {
 }
 
 // ******************** TOP TEN WINNERS ********************
-let winnersArr: any = [];
+type WinnerType = {
+    x: string;
+    y: number;
+  }
+let winnersArr: WinnerType[] = [];
 
 winners.map((winner) => {
     if ( winner.fullName !== undefined) {

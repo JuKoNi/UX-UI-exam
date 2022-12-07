@@ -4,4 +4,8 @@
 
 .winners-chart {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 25em;
 }

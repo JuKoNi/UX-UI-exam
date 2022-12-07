@@ -24,9 +24,9 @@ const Nav = (props: Props) => {
         <ul className='nav-list'>
             <li className={props.showCategory ? "selected" : ''} onClick={props.toggleCategory}>Nobel Prizes by category</li>
             <li className={props.showCountry ? "selected" : ''} onClick={props.toggleCountry}>Top 30 winners by country</li>
-            <li className={props.showGender ? "selected" : ''} onClick={props.toggleGender}>Nobel Prizes by gender</li>
-            <li className={props.showWinnersByCategory ? "selected" : ''} onClick={props.toggleWinnersByCategory}>Number of winners by category</li>
-            <li className={props.showTopTen ? "selected" : ''} onClick={props.toggleTopTen}>Top 10 winners</li>
+            <li className={props.showGender ? "selected" : ''} onClick={props.toggleGender}>Laureates by gender</li>
+            <li className={props.showWinnersByCategory ? "selected" : ''} onClick={props.toggleWinnersByCategory}>Number of laureates by category</li>
+            <li className={props.showTopTen ? "selected" : ''} onClick={props.toggleTopTen}>Top 10 laureates</li>
             <li className={props.showAverage ? "selected" : ''} onClick={props.toggleAverage}>Average prize money by year</li>
         </ul>
     </nav>

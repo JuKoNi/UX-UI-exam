@@ -44,14 +44,18 @@ for (const year of yearArr) {
     yearCount[year] = yearCount[year] ? yearCount[year] + 1 : 1;
 }
 // console.log(yearCount);
+type PrizeType = {
+  x: number | string;
+  y: number ;
+}
 
-let prizeArr: any = [];
+let prizeArr: PrizeType[] = [];
 awards.map((award) => {prizeArr.push({ x: award.awardYear, y: award.prizeAmount})
 });
 
 const tempPrize: any = {};
 
-prizeArr.forEach(function(d: { x: number; y: number; }) {
+prizeArr.forEach(function(d: { x: number | string; y: number; }) {
   if (tempPrize.hasOwnProperty(d.x)) {
     tempPrize[d.x] = tempPrize[d.x] + d.y;
   } else {
@@ -68,12 +72,12 @@ for (const value in tempPrize) {
 // console.log(averagePrizeArr);
 
 // ******************** AVERAGE PRIZE SUM PER YEAR **ADJUSTED** ********************
-let adjustedPrizeArr: any = [];
+let adjustedPrizeArr: PrizeType[] = [];
 awards.map((award) => {adjustedPrizeArr.push({ x: award.awardYear, y: award.prizeAmountAdjusted})
 });
 const tempPrizeAdjusted: any = {};
 
-adjustedPrizeArr.forEach(function(d: { x: number; y: number; }) {
+adjustedPrizeArr.forEach(function(d: { x: number | string; y: number; }) {
   if (tempPrizeAdjusted.hasOwnProperty(d.x)) {
     tempPrizeAdjusted[d.x] = tempPrizeAdjusted[d.x] + d.y;
   } else {
@@ -81,7 +85,7 @@ adjustedPrizeArr.forEach(function(d: { x: number; y: number; }) {
   }
 });
 
-const averagePrizeAdjustedArr = [];
+const averagePrizeAdjustedArr: PrizeType[] = [];
 
 for (const value in tempPrizeAdjusted) {
   averagePrizeAdjustedArr.push({ x: value, y: tempPrizeAdjusted[value]/yearCount[value] });
@@ -108,8 +112,41 @@ let PrizeData = {
 // console.log(averagePrizeAdjustedArr);
 
 // ******************** NUMBER OF WINNERS BY CATEGORY ********************
-let winnersArr: any = []
-awards.map((winner) => {winnersArr.push({ laureates: winner.laureates, category: winner.category?.en})})
+
+type WinnerType = {
+  laureates: string[];
+  category: string;
+}
+console.log('first laureate', awards[0].laureates);
+
+const getNames = (laureates: any[] | any): string[] => {
+  if (Array.isArray(laureates)) {
+    return laureates.map(laureate => {
+     if (laureate?.knownName?.en) {
+       return laureate.knownName.en
+
+     } else if (laureate?.orgName?.en) {
+        return laureate.orgName.en
+       
+     } else {
+      console.log('inget knownName eller orgName', laureate);
+      return []
+     }
+   })
+
+  } else {
+    console.log('inte en array', laureates);
+    return []
+  }
+
+}
+
+console.log(awards[72]);
+
+let winnersArr: WinnerType[] = []
+awards.map((winner) => {winnersArr.push({ laureates: getNames(winner.laureates), category: winner.category?.en})})
+console.log(winnersArr);
+
 
 const count: any = {};
 

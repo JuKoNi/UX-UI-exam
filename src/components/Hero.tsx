@@ -10,9 +10,7 @@ const Hero = (props: Props) => {
     const navigate = useNavigate();
 
     const enterSite = () => {
-      navigate('/charts');
-      console.log('bajs');
-      
+      navigate('/charts');      
     }
 
   return (

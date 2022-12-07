@@ -25,7 +25,6 @@ const Content = (props: Props) => {
 
   const pickAnimation: (chosen: string) => void = (chosen) => {
     setChosenAni(chosen)
-    console.log(chosen)
   }
 
   // TOGGLES

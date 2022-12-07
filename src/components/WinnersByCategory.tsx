@@ -27,7 +27,7 @@ const WinnersByCategory = (props: Props) => {
     }
     if (props.chosenAni === 'gentle') {
       anime({
-        targets: '.winByCat-chart',
+        targets: '.winByCat-wrapper',
         scale: 1.1,
         // opacity: [1, 0.7],
         easing: 'easeInOutQuad',

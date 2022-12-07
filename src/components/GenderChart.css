@@ -3,6 +3,9 @@
     perspective: 1000px;
 }
 
-/* .gender-chart {
-    transform: translateX(-40em);
-} */
+.gender-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 25em;
+}

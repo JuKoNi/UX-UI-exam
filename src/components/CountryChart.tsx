@@ -28,7 +28,7 @@ const CountryChart = (props: Props) => {
     }
     if (props.chosenAni === 'gentle') {
       anime({
-        targets: '.country-chart',
+        targets: '.country-wrapper',
         scale: 1.1,
         // opacity: [1, 0.7],
         easing: 'easeInOutQuad',

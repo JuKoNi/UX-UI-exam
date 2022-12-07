@@ -28,7 +28,7 @@ const CategoryChart = (props: Props) => {
         }
       if (props.chosenAni === 'gentle') {
         anime({
-          targets: '.category-chart',
+          targets: '.category-wrapper',
           scale: 1.1,
           // opacity: [1, 0.7],
           easing: 'easeInOutQuad',
@@ -40,8 +40,8 @@ const CategoryChart = (props: Props) => {
 
   return (
 
-    <section className='chart-wrapper category-chart'>
-      <div className='category-wrapper'>
+    <section className='chart-wrapper category-wrapper'>
+      <div className='category-chart'>
           <h2>Chart of the Nobel Prize categories</h2>
           <Bar data={categoryData} />
       </div>

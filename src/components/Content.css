@@ -10,11 +10,9 @@
 }
 .content-container {
     width: 80vw;
-    min-height: 5em;
-    height: 30em;
+    height: 32em;
     background-color: rgba(59, 76, 175, 0.564);
-    margin-bottom: 1em;
-    box-shadow: 4px 0px 6px 2px #9080d8;
+    box-shadow: -5px 5px 10px 0px #9080d8;
     position: relative;
     perspective: 1000px;
 }
@@ -24,15 +22,16 @@ h3 {
 
 .chart-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     background-color: white;
-    border: 2px solid  rgba(59, 76, 175, 0.564);
+    /* border: 2px solid  rgba(59, 76, 175, 0.564); */
     width: 80vw;
     height: 29em;
     position: absolute;
-    top: 7vh;
+    /* top: 7vh; */
   }
 
 

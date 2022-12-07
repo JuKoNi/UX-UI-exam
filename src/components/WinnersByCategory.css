@@ -3,5 +3,8 @@
 
 }
 .winByCat-chart {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 25em;
 }

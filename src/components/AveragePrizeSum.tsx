@@ -15,18 +15,26 @@ const AveragePrizeSum = (props: Props) => {
       anime({
         targets: '.sum-chart',
         keyframes: [
-          {translateX: '-100vw'},
-          {rotate: '-180deg'},
-          {translateX: '0vw'},
-          {rotate: '360deg'},
+          {transformOrigin: '50%, 50%'},
+          {rotate: '40deg'},
+          {rotate: '-40deg'},
+          {rotate: '20deg'},
+          {rotate: '-20deg'},
+          {rotate: '10deg'},
+          {rotate: '-10deg'},
+          {rotate: '5deg'},
+          {rotate: '-5deg'},
+          {rotate: '0deg'},
+
         ],
-        easing: 'easeInOutElastic',
-        duration: 2000
+        easing: 'spring(1, 80, 10, 0)',
+        // easing: 'easeInOutElastic',
+        duration: 4000
      })
     }
   if (props.chosenAni === 'gentle') {
     anime({
-      targets: '.sum-chart',
+      targets: '.sum-wrapper',
       scale: 1.1,
       // opacity: [1, 0.7],
       easing: 'easeInOutQuad',
