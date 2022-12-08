@@ -38,7 +38,7 @@ const WinnersByCategory = (props: Props) => {
   
   return (
     <section className="chart-wrapper winByCat-wrapper">
-      <div className='winByCat-chart'>WinnersByCategory NR3 (CIRKEL)
+      <div className='winByCat-chart'>
         <Pie data={winnersByCategoryData} />
       </div>
 

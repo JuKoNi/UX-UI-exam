@@ -40,7 +40,7 @@ const WinnersChart = (props: Props) => {
     
   return (
     <section className="chart-wrapper winners-wrapper">
-      <div className="winners-chart">WinnersChart NR7
+      <div className="winners-chart">
         <Bar data={winnersData} />
       </div>
 

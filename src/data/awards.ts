@@ -104,7 +104,7 @@ let PrizeData = {
       backgroundColor: ['#A82978']
   },
   {
-    label: 'Average prize money in SEK, current value.',
+    label: 'Average prize money in SEK, current value',
     data: averagePrizeAdjustedArr,
     backgroundColor: ['#9E66BD']
 }], 
@@ -127,9 +127,9 @@ const getNames = (laureates: any[] | any): string[] => {
      } else if (laureate?.orgName?.en) {
         return laureate.orgName.en
        
-     } else {
-      return []
-     }
+      } else {
+        return []
+      }
    })
 
   } else {

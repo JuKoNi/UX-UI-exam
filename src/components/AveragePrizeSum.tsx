@@ -43,9 +43,8 @@ const AveragePrizeSum = (props: Props) => {
     
   return (
     <section className='chart-wrapper sum-wrapper'>
-      <div className="sum-chart">AveragePrizeSum NR1 (LINJE)
+      <div className="sum-chart">
           <Line data={PrizeData} />
-          {/* <Line data={AdjustedPrizeData} /> */}
       </div>
 
     </section>

@@ -41,7 +41,6 @@ const CategoryChart = (props: Props) => {
 
     <section className='chart-wrapper category-wrapper'>
       <div className='category-chart'>
-          <h2>Chart of the Nobel Prize categories</h2>
           <Bar data={categoryData} />
       </div>
 

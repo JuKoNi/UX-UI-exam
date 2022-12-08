@@ -54,7 +54,7 @@ const GenderChart = (props: Props) => {
 
   return (
     <section className='chart-wrapper gender-wrapper'>
-      <div className='gender-chart'>GenderChart NR4 (cirkel)
+      <div className='gender-chart'>
           <Pie data={genderData} />
       </div>
 

@@ -31,8 +31,6 @@ let countriesArr: string[] = [];
 winners.map(winner => winner.birth?.place.country.en ? countriesArr.push( winner.birth?.place.country.en) : winner.founded?.place?.country?.en ? countriesArr.push( winner.founded?.place?.country?.en) : countriesArr.push('Unknown') )
 
 
-
-
 const countryCount: any = {};
 
 for (const country of countriesArr) {
@@ -44,17 +42,16 @@ type CountryType = {
 }
 let countryData: CountryType[] = [];
 
-
 for (const [key, value] of Object.entries(countryCount)) {
 
     countryData.push({ x: key, y: value});
 }
 
+
 countryData.sort((a: { y: number; }, b: { y: number; }) => b.y - a.y);
 
 let numOfCountries: number = 30;
 const sortedCountries = countryData.splice(0, numOfCountries)
-console.log(sortedCountries)
 
 
 

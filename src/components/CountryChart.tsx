@@ -40,7 +40,7 @@ const CountryChart = (props: Props) => {
 
   return (
     <section className="chart-wrapper country-wrapper">
-      <div className='country-chart'>CountryChart NR6
+      <div className='country-chart'>
         <Bar data={CountryData} />
       </div>
 
