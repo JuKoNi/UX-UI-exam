@@ -1,5 +1,6 @@
 .winByCat-wrapper {
     margin: 0 auto;
+    perspective: 1000px;
 
 }
 .winByCat-chart {
